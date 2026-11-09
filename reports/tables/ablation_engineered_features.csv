@@ -1,0 +1,5 @@
+model,PR_AUC raw features,PR_AUC + engineered,recall(0.5) raw,recall(0.5) + engineered
+Logistic Regression,0.4607,0.4955,0.1993,0.2387
+Decision Tree,0.6699,0.883,0.5328,0.7971
+Random Forest,0.738,0.9003,0.3507,0.8045
+HistGradientBoosting,0.807,0.8804,0.6311,0.7677

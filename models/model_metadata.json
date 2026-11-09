@@ -1,0 +1,113 @@
+{
+  "model_version": "1.0.0",
+  "trained_at": "2026-10-27T02:50:00",
+  "model_name": "Random Forest",
+  "calibrated_isotonic": true,
+  "best_hyperparameters": {
+    "class_weight": null,
+    "max_depth": 8,
+    "min_samples_leaf": 1
+  },
+  "random_seed": 42,
+  "split": {
+    "test_size": 0.2,
+    "stratified": true
+  },
+  "input_columns": [
+    "Type",
+    "Air temperature [K]",
+    "Process temperature [K]",
+    "Rotational speed [rpm]",
+    "Torque [Nm]",
+    "Tool wear [min]"
+  ],
+  "numeric_inputs": [
+    "Air temperature [K]",
+    "Process temperature [K]",
+    "Rotational speed [rpm]",
+    "Torque [Nm]",
+    "Tool wear [min]"
+  ],
+  "categorical_inputs": [
+    "Type"
+  ],
+  "engineered_features": {
+    "temp_diff_K": "Process temp - Air temp",
+    "power_W": "Torque * rpm * 2*pi/60",
+    "wear_torque": "Tool wear * Torque"
+  },
+  "excluded_columns": {
+    "leakage_flags": [
+      "TWF",
+      "HDF",
+      "PWF",
+      "OSF",
+      "RNF"
+    ],
+    "identifiers": [
+      "UDI",
+      "Product ID"
+    ],
+    "target": "Machine failure"
+  },
+  "type_levels": [
+    "L",
+    "M",
+    "H"
+  ],
+  "observed_ranges": {
+    "Air temperature [K]": [
+      295.3,
+      304.5
+    ],
+    "Process temperature [K]": [
+      305.7,
+      313.8
+    ],
+    "Rotational speed [rpm]": [
+      1168.0,
+      2886.0
+    ],
+    "Torque [Nm]": [
+      3.8,
+      76.6
+    ],
+    "Tool wear [min]": [
+      0.0,
+      253.0
+    ]
+  },
+  "decision_threshold": 0.22670620738217423,
+  "medium_risk_threshold": 0.033875,
+  "medium_risk_rule": "probability >= training baseline failure rate (documented assumption)",
+  "threshold_objective": "max F2 on out-of-fold training predictions (middle of plateau within 0.005 of best)",
+  "test_metrics_at_decision_threshold": {
+    "threshold": 0.22670620738217423,
+    "precision": 0.890625,
+    "recall": 0.8382352941176471,
+    "f1": 0.8636363636363636,
+    "f2": 0.8482142857142857,
+    "accuracy": 0.991,
+    "PR_AUC": 0.8822885094267876,
+    "ROC_AUC": 0.9721943125076118,
+    "TP": 57,
+    "FP": 7,
+    "FN": 11,
+    "TN": 1925
+  },
+  "cv_pr_auc_mean": 0.9002791045575843,
+  "cv_pr_auc_std": 0.027736980150707316,
+  "brier_oof_uncalibrated": 0.007636283867890103,
+  "brier_oof_calibrated": 0.006592073860327433,
+  "dataset": {
+    "rows": 10000,
+    "failure_rate_pct": 3.39
+  },
+  "environment": {
+    "python": "3.12.3",
+    "scikit_learn": "1.8.0",
+    "pandas": "3.0.2",
+    "numpy": "2.4.4",
+    "joblib": "1.5.3"
+  }
+}

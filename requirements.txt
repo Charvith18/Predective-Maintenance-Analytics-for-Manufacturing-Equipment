@@ -1,0 +1,11 @@
+# scikit-learn is pinned to the version used to train the saved model (joblib files are version-sensitive).
+streamlit>=1.40
+scikit-learn==1.8.0
+pandas>=2.2
+numpy>=2.0
+scipy>=1.11
+matplotlib>=3.8
+seaborn>=0.13
+joblib>=1.3
+# Optional (only for src/explain_shap.py):
+# shap>=0.45

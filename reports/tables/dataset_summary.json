@@ -1,0 +1,65 @@
+{
+  "rows": 10000,
+  "columns": 14,
+  "missing_values": 0,
+  "duplicate_rows": 0,
+  "duplicate_feature_rows": 0,
+  "target_is_binary": true,
+  "failures": 339,
+  "non_failures": 9661,
+  "failure_rate_pct": 3.39,
+  "type_counts": {
+    "L": 6000,
+    "M": 2997,
+    "H": 1003
+  },
+  "id_columns_unique": {
+    "UDI": true,
+    "Product ID": true
+  },
+  "dtypes": {
+    "UDI": "int64",
+    "Product ID": "str",
+    "Type": "str",
+    "Air temperature [K]": "float64",
+    "Process temperature [K]": "float64",
+    "Rotational speed [rpm]": "int64",
+    "Torque [Nm]": "float64",
+    "Tool wear [min]": "int64",
+    "Machine failure": "int64",
+    "TWF": "int64",
+    "HDF": "int64",
+    "PWF": "int64",
+    "OSF": "int64",
+    "RNF": "int64"
+  },
+  "observed_ranges": {
+    "Air temperature [K]": [
+      295.3,
+      304.5
+    ],
+    "Process temperature [K]": [
+      305.7,
+      313.8
+    ],
+    "Rotational speed [rpm]": [
+      1168.0,
+      2886.0
+    ],
+    "Torque [Nm]": [
+      3.8,
+      76.6
+    ],
+    "Tool wear [min]": [
+      0.0,
+      253.0
+    ]
+  },
+  "twf_wear_range": [
+    198,
+    253
+  ],
+  "tool_wear_decreases_in_UDI_order": 119,
+  "has_timestamp_column": false,
+  "no_machine_id_repeats": true
+}

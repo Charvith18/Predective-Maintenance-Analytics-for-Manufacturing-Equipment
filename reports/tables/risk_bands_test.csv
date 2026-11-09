@@ -1,0 +1,4 @@
+band,records,failures,failure_rate_pct
+Low,1769,4,0.23
+Medium,167,7,4.19
+High,64,57,89.06

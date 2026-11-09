@@ -1,0 +1,6 @@
+model,threshold,precision,recall,f1,accuracy,PR_AUC,ROC_AUC,TP,FP,FN,TN
+Baseline (always predict prior),0.5,0.0,0.0,0.0,0.966,0.034,0.5,0,0,68,1932
+Logistic Regression,0.5,0.5714,0.1765,0.2697,0.9675,0.4638,0.9255,12,9,56,1923
+Decision Tree,0.5,0.9464,0.7794,0.8548,0.991,0.8736,0.9572,53,3,15,1929
+Random Forest,0.5,0.9815,0.7794,0.8689,0.992,0.8942,0.9739,53,1,15,1931
+HistGradientBoosting,0.5,0.9492,0.8235,0.8819,0.9925,0.9029,0.9856,56,3,12,1929

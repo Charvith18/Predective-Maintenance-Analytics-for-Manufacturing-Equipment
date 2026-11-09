@@ -1,0 +1,6 @@
+,mean (no failure),mean (failure)
+Air temperature [K],299.97,300.89
+Process temperature [K],310.0,310.29
+Rotational speed [rpm],1540.26,1496.49
+Torque [Nm],39.63,50.17
+Tool wear [min],106.69,143.78

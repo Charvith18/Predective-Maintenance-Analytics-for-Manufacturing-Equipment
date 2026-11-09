@@ -1,0 +1,6 @@
+feature,iqr_low,iqr_high,n_outliers,failure_rate_in_outliers_pct,skew
+Air temperature [K],293.5,306.3,0,,0.114
+Process temperature [K],305.35,314.55,0,,0.015
+Rotational speed [rpm],1139.5,1895.5,418,8.37,1.993
+Torque [Nm],12.8,67.2,69,89.86,-0.01
+Tool wear [min],-110.5,325.5,0,,0.027

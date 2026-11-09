@@ -1,0 +1,14 @@
+case,Type,Air temperature [K],Process temperature [K],Rotational speed [rpm],Torque [Nm],Tool wear [min],failure_probability,predicted_failure,risk_category
+Typical operation,M,300.0,310.0,1500,40.0,100,0.0002,0,Low
+Fresh tool (wear 0),M,300.0,310.0,1500,40.0,0,0.0006,0,Low
+Worn tool (wear 150),M,300.0,310.0,1500,40.0,150,0.0002,0,Low
+Very worn tool (wear 220),M,300.0,310.0,1500,40.0,220,0.0399,0,Medium
+Type L,L,300.0,310.0,1500,40.0,100,0.0002,0,Low
+Type H,H,300.0,310.0,1500,40.0,100,0.0008,0,Low
+Overstrain: high torque + wear,L,300.0,310.0,1500,62.0,200,1.0,1,High
+Small temp gap + low speed,M,300.0,308.4,1300,45.0,100,0.6127,1,High
+"Very high power (torque 70, 1500 rpm)",M,300.0,310.0,1500,70.0,100,1.0,1,High
+"Very low power (torque 5, 1600 rpm)",M,300.0,310.0,1600,5.0,100,1.0,1,High
+Training-range minimum wear/torque,M,300.0,310.0,1500,3.8,0,1.0,1,High
+Training-range maximum wear,M,300.0,310.0,1500,40.0,253,0.0479,0,Medium
+OUT OF RANGE wear (400),M,300.0,310.0,1500,40.0,400,0.6793,1,High
